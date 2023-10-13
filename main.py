@@ -103,6 +103,10 @@ with tab1:
     # If Student is absent then duraiton is 0
     if(present_val == "Absent"):
         duration_val = 0
+    else:
+        if(duration_val == 0):
+            duration_val = 1
+
 
     # Submit Button
     submitted = st.button("Submit",on_click=updateExcel,args=(name_val,date_val,duration_val,time_val,am_pm_val,present_val,comments))
