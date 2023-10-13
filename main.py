@@ -101,11 +101,11 @@ with tab1:
     comments = st.text_input('Comments')
 
     # If Student is absent then duraiton is 0
-    if(present_val == "Absent"):
-        duration_val = 0
+    if present_val == "Present":
+        if duration_val == 0:
+             duration_val = 1
     else:
-        if(duration_val == 0):
-            duration_val = 1
+        duration_val = None
 
 
     # Submit Button
